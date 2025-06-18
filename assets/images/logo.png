@@ -1,0 +1,28 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="200" height="60" fill="none"/>
+  
+  <!-- ロゴマーク部分 -->
+  <g transform="translate(10, 10)">
+    <!-- 円形のベース -->
+    <circle cx="20" cy="20" r="18" fill="#007bff" opacity="0.1"/>
+    <circle cx="20" cy="20" r="15" fill="none" stroke="#007bff" stroke-width="2"/>
+    
+    <!-- 中央のアイコン（ノマドを象徴する山とクラウド） -->
+    <path d="M10 25 L15 15 L20 20 L25 15 L30 25 Z" fill="#007bff" opacity="0.7"/>
+    <ellipse cx="20" cy="12" rx="8" ry="3" fill="#667eea" opacity="0.6"/>
+  </g>
+  
+  <!-- 会社名テキスト -->
+  <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#333">
+    ノマドマジック
+  </text>
+  <text x="50" y="40" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    株式会社
+  </text>
+  
+  <!-- 英語表記 -->
+  <text x="50" y="52" font-family="Arial, sans-serif" font-size="8" fill="#999">
+    NOMAD MAGIC
+  </text>
+</svg> 
