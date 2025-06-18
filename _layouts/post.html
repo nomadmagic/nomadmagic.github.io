@@ -2,18 +2,42 @@
 layout: default
 ---
 
+{% if page.featured_image %}
+<section class="post-hero">
+    <div class="post-hero-background">
+        <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}" class="post-hero-bg-image">
+    </div>
+    <div class="post-hero-overlay"></div>
+    <div class="container">
+        <div class="post-hero-content">
+            <h1 class="post-hero-title">{{ page.title }}</h1>
+            <div class="post-hero-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%b. %-d" }}{% assign day = page.date | date: "%-d" %}{% if day == "1" or day == "21" or day == "31" %}st{% elsif day == "2" or day == "22" %}nd{% elsif day == "3" or day == "23" %}rd{% else %}th{% endif %} {{ page.date | date: "%Y" }}
+                </time>
+                {% if page.author %}
+                    <span class="post-author">by Nomad Magic Inc.</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
 <article class="post">
+    {% unless page.featured_image %}
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%Y年%m月%d日" }}
+                {{ page.date | date: "%b. %-d" }}{% assign day = page.date | date: "%-d" %}{% if day == "1" or day == "21" or day == "31" %}st{% elsif day == "2" or day == "22" %}nd{% elsif day == "3" or day == "23" %}rd{% else %}th{% endif %} {{ page.date | date: "%Y" }}
             </time>
             {% if page.author %}
-                <span class="post-author">by {{ page.author }}</span>
+                <span class="post-author">by Nomad Magic Inc.</span>
             {% endif %}
         </div>
     </header>
+    {% endunless %}
 
     <div class="post-content">
         {{ content }}
