@@ -1,0 +1,45 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
+<section class="page-content">
+    <div class="container">
+        <h1 class="page-title">Contact</h1>
+        
+        <div class="contact-info">
+            <div class="contact-section">
+                <h2>お問い合わせ</h2>
+                <p>{{ site.company.name }}へのお問い合わせは、以下の連絡先までお願いいたします。</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>会社名</h3>
+                        <p>{{ site.company.name }}</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>所在地</h3>
+                        <p>{{ site.company.address }}</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>メールアドレス</h3>
+                        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>代表者</h3>
+                        <p>{{ site.company.president }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="business-hours">
+                <h2>営業時間</h2>
+                <p>平日 9:00 - 18:00（土日祝日は休業）</p>
+            </div>
+        </div>
+    </div>
+</section> 

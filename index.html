@@ -1,0 +1,38 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">遠く離れてなんて、いない。</h1>
+            <p class="hero-subtitle">見てみたい未来とは、いったい、、</p>
+            <a href="{{ '/about/' | relative_url }}" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="latest-topics">
+    <div class="container">
+        <h2 class="section-title">Latest Topics</h2>
+        <div class="posts-grid">
+            {% for post in site.posts limit:3 %}
+                <article class="post-card">
+                    <h3 class="post-card-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h3>
+                    <div class="post-card-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%Y年%m月%d日" }}
+                        </time>
+                    </div>
+                    <div class="post-card-excerpt">
+                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </div>
+                    <a href="{{ post.url | relative_url }}" class="read-more">Continue reading "{{ post.title }}"</a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section> 
