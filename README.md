@@ -1,0 +1,2 @@
+# nomadmagic.github.io
+ホームページ
